@@ -22,9 +22,9 @@ export default class SearchBar extends React.Component {
             type="text"
             value={ searchText }
             onChange={ onSearchTextChange }
-            id="inputPesquisa" />
+            id="inputPesquisa"
+          />
         </label>
-
         <label data-testid="checkbox-input-label" htmlFor="inputFavoritos">
           Mostrar somente favoritos:
           <input
@@ -32,15 +32,16 @@ export default class SearchBar extends React.Component {
             type="checkbox"
             checked={ bookmarkedOnly }
             onChange={ onBookmarkedChange }
-            id="inputFavoritos" />
+            id="inputFavoritos"
+          />
         </label>
-
         <label data-testid="select-input-label" htmlFor="inputSelect">
           Filtrar por gênero:
           <select data-testid="select-input" 
             value={ selectedGenre } 
             onChange={ onSelectedGenreChange }
-            id="inputSelect">
+            id="inputSelect"
+          >
             <option data-testid="select-option" value="">Todos</option>
             <option data-testid="select-option" value="action">Ação</option>
             <option data-testid="select-option" value="comedy">Comédia</option>
