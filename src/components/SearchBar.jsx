@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 export default class SearchBar extends React.Component {
   render() {
     const {
@@ -16,7 +18,7 @@ export default class SearchBar extends React.Component {
 
         <label data-testid="text-input-label" htmlFor="inputPesquisa">
           Inclui o texto:
-          <input 
+          <input
             data-testid="text-input"
             type="text"
             value={ searchText }
@@ -54,4 +56,13 @@ export default class SearchBar extends React.Component {
       </form>
     );
   }
+}
+
+SearchBar.propTypes = {
+  searchText: PropTypes.string,
+  onSearchTextChange: PropTypes.func,
+  bookmarkedOnly: PropTypes.bool,
+  onBookmarkedChange: PropTypes.func,
+  selectedGenre: PropTypes.string,
+  onSelectedGenreChange: PropTypes.func,
 }

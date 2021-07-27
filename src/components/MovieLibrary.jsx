@@ -6,11 +6,13 @@ import SearchBar from './SearchBar';
 // import AddMovie from './AddMovie';
 
 class MovieLibrary extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  /*   
+    constructor(props) {
+      super(props);
+    }
+ */  
+  
+    render() {
     return (
       <div>
         <h2> My awesome movie library </h2>
@@ -22,9 +24,9 @@ class MovieLibrary extends Component {
           selectedGenre=""
           onSelectedGenreChange={ () => {} }
         />
-        {/*         
+        {/*
           <MovieList movies={ this.props.movies } />
-          <AddMovie /> 
+          <AddMovie />
         */}
       </div>
     );
