@@ -2,48 +2,47 @@ import React from 'react';
 
 export default class SearchBar extends React.Component {
   render() {
-    const { 
-      searchText, 
-      onSearchTextChange, 
-      bookmarkedOnly, 
-      onBookmarkedChange, 
-      selectedGenre, 
-      onSelectedGenreChange 
+    const {
+      searchText,
+      onSearchTextChange,
+      bookmarkedOnly,
+      onBookmarkedChange,
+      selectedGenre,
+      onSelectedGenreChange,
     } = this.props;
 
-    return(
+    return (
       <form data-testid="search-bar-form">
 
-        <label data-testid="text-input-label" htmlFor="">
+        <label data-testid="text-input-label" htmlFor="inputPesquisa">
           Inclui o texto:
           <input 
-            data-testid="text-input" 
-            type="text" 
-            value={ searchText } 
-            onChange={ onSearchTextChange } 
+            data-testid="text-input"
+            type="text"
+            value={ searchText }
+            onChange={ onSearchTextChange }
+            id="inputPesquisa"
           />
         </label>
 
-        <label data-testid="checkbox-input-label" htmlFor="">
+        <label data-testid="checkbox-input-label" htmlFor="inputFavoritos">
           Mostrar somente favoritos:
-          <input 
-            data-testid="checkbox-input" 
-            type="checkbox" 
-            checked={ bookmarkedOnly } 
-            onChange={ onBookmarkedChange } 
-            name="" 
-            id="" 
+          <input
+            data-testid="checkbox-input"
+            type="checkbox"
+            checked={ bookmarkedOnly }
+            onChange={ onBookmarkedChange }
+            id="inputFavoritos"
           />
         </label>
 
-        <label data-testid="select-input-label">
+        <label data-testid="select-input-label" htmlFor="inputSelect">
           Filtrar por gênero:
           <select
             data-testid="select-input"
-            value={ selectedGenre } 
+            value={ selectedGenre }
             onChange={ onSelectedGenreChange }
-            name="" 
-            id="" 
+            id="inputSelect"
           >
             <option data-testid="select-option" value="">Todos</option>
             <option data-testid="select-option" value="action">Ação</option>
@@ -56,4 +55,3 @@ export default class SearchBar extends React.Component {
     );
   }
 }
-
