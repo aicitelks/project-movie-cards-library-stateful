@@ -65,6 +65,31 @@ export default class AddMovie extends React.Component {
               />
             </label>
           </div>
+          <div>
+            <label data-testid="storyline-input-label" htmlFor="textareat-storyline">Sinopse:
+            <textarea
+              id="textareat-storyline"
+              data-testid="storyline-input"
+              name="storyline"
+              cols="30"
+              rows="10"
+              value={ storyline }
+              onChange={ this.handleChange }
+            />
+            </label>
+          </div>
+          <div>
+            <label data-testid="rating-input-label" htmlFor="input-rating">Avaliação:
+              <input
+                id="input-rating"
+                data-testid="rating-input"
+                type="number"
+                name="rating"
+                value={ rating }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
         </form>
       </div>
     );
