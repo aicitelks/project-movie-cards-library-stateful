@@ -1,6 +1,8 @@
 // implement AddMovie component here
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 export default class AddMovie extends React.Component {
   constructor() {
     super();
@@ -111,4 +113,8 @@ export default class AddMovie extends React.Component {
       </form>
     );
   }
+}
+
+AddMovie.propTypes = {
+  onClick: PropTypes.func.isRequired,
 }
