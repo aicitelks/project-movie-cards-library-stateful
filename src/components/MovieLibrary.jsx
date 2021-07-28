@@ -27,7 +27,7 @@ class MovieLibrary extends Component {
         {/*
           <MovieList movies={ this.props.movies } />
         */}
-        <AddMovie onClick={ () => {} }/>
+        <AddMovie onClick={ () => {} } />
       </div>
     );
   }
