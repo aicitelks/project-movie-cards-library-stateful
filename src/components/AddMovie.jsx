@@ -42,9 +42,7 @@ export default class AddMovie extends React.Component {
     const {subtitle, title, imagePath, storyline, rating, genre} = this.state;
 
     return (
-      <div>
         <form data-testid="add-movie-form">
-          <div>
             <label data-testid="title-input-label" htmlFor="input-title"> Título:
               <input
                 id="input-title"
@@ -55,8 +53,6 @@ export default class AddMovie extends React.Component {
                 onChange={ this.handleChange }
               />
             </label>
-          </div>
-          <div>
             <label data-testid="subtitle-input-label" htmlFor="input-subtitle">Subtítulo:
               <input
                 id="input-subtitle"
@@ -67,8 +63,6 @@ export default class AddMovie extends React.Component {
                 onChange={ this.handleChange }
               />
             </label>
-          </div>
-          <div>
             <label data-testid="image-input-label" htmlFor="input-image">Imagem:
               <input
                 id="input-image"
@@ -79,8 +73,6 @@ export default class AddMovie extends React.Component {
                 onChange={ this.handleChange }
               />
             </label>
-          </div>
-          <div>
             <label data-testid="storyline-input-label" htmlFor="textareat-storyline">Sinopse:
             <textarea
               id="textareat-storyline"
@@ -92,8 +84,6 @@ export default class AddMovie extends React.Component {
               onChange={ this.handleChange }
             />
             </label>
-          </div>
-          <div>
             <label data-testid="rating-input-label" htmlFor="input-rating">Avaliação:
               <input
                 id="input-rating"
@@ -104,8 +94,6 @@ export default class AddMovie extends React.Component {
                 onChange={ this.handleChange }
               />
             </label>
-          </div>
-          <div>
             <label data-testid="genre-input-label" htmlFor="select-genre">Gênero:
               <select
                 id="select-genre"
@@ -119,17 +107,13 @@ export default class AddMovie extends React.Component {
                 <option data-testid="genre-option" value="thriller">Suspense</option>
               </select>
             </label>
-          </div>
-          <div>
             <button
               data-testid="send-button"
               type="button"
               onClick={ this.addMovie }
             >Adicionar filme
             </button>
-          </div>
         </form>
-      </div>
     );
   }
 }
