@@ -19,7 +19,7 @@ export default class AddMovie extends React.Component {
   
   handleChange(event) {
     this.setState({
-      title: event.target.value,
+      [event.target.name]: event.target.value,
     });
   }
 
@@ -35,7 +35,20 @@ export default class AddMovie extends React.Component {
                 id="input-title"
                 data-testid="title-input"
                 type="text"
+                name="title"
                 value={ title }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
+          <div>
+            <label data-testid="subtitle-input-label">Subtítulo:
+              <input
+                id="input-subtitle"
+                data-testid="subtitle-input"
+                type="text"
+                name="subtitle"
+                value={ subtitle }
                 onChange={ this.handleChange }
               />
             </label>
