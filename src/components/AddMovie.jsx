@@ -20,7 +20,7 @@ export default class AddMovie extends React.Component {
 
     return (
       <div>
-        Addmovie criado
+        <form data-testid="add-movie-form"></form>
       </div>
     );
   }
