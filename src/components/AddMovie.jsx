@@ -42,13 +42,25 @@ export default class AddMovie extends React.Component {
             </label>
           </div>
           <div>
-            <label data-testid="subtitle-input-label">Subtítulo:
+            <label data-testid="subtitle-input-label" htmlFor="input-subtitle">Subtítulo:
               <input
                 id="input-subtitle"
                 data-testid="subtitle-input"
                 type="text"
                 name="subtitle"
                 value={ subtitle }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
+          <div>
+            <label data-testid="image-input-label" htmlFor="input-image">Imagem:
+              <input
+                id="input-image"
+                data-testid="image-input"
+                type="text"
+                name="imagePath"
+                value={ imagePath }
                 onChange={ this.handleChange }
               />
             </label>
