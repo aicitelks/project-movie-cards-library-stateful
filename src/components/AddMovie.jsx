@@ -15,11 +15,26 @@ export default class AddMovie extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.addMovie = this.addMovie.bind(this);
   }
   
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
+    });
+  }
+
+  addMovie(event) {
+    const { onClick } = this.props;
+    event.preventDefault();
+    onClick(this.state);
+    this.setState({
+      subtitle: '',
+      title: '',
+      imagePath: '',
+      storyline: '',
+      rating: 0,
+      genre: 'action',
     });
   }
 
@@ -104,6 +119,14 @@ export default class AddMovie extends React.Component {
                 <option data-testid="genre-option" value="thriller">Suspense</option>
               </select>
             </label>
+          </div>
+          <div>
+            <button
+              data-testid="send-button"
+              type="button"
+              onClick={ this.addMovie }
+            >Adicionar filme
+            </button>
           </div>
         </form>
       </div>
