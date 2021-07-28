@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Title from './addMovie/Title';
 import Subtitle from './addMovie/Subtitle';
 import Image from './addMovie/Image';
+import Storyline from './addMovie/Storyline';
 
 export default class AddMovie extends React.Component {
   constructor() {
@@ -51,16 +52,8 @@ export default class AddMovie extends React.Component {
         <Title title={ title } onChange={ this.handleChange } />
         <Subtitle subtitle={ subtitle } onChange={ this.handleChange } />
         <Image imagePath={ imagePath } onChange={ this.handleChange } />
-        
-        <label data-testid="storyline-input-label" htmlFor="storyline-input">
-          Sinopse:
-          <textarea
-            data-testid="storyline-input"
-            name="storyline"
-            value={ storyline }
-            onChange={ this.handleChange }
-          />
-        </label>
+        <Storyline storyline={ storyline } onChange={ this.handleChange } />
+
         <label data-testid="rating-input-label" htmlFor="rating-input">
           Avaliação:
           <input
