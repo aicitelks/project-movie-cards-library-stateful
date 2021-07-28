@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import SearchBar from './SearchBar';
 // import MovieList from './MovieList';
-// import AddMovie from './AddMovie';
+import AddMovie from './AddMovie';
 
 class MovieLibrary extends Component {
   /*
@@ -26,8 +26,8 @@ class MovieLibrary extends Component {
         />
         {/*
           <MovieList movies={ this.props.movies } />
-          <AddMovie />
         */}
+        <AddMovie onClick={ () => {} }/>
       </div>
     );
   }
