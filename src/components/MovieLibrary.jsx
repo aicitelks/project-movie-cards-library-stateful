@@ -5,8 +5,9 @@ import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 import AddMovie from './AddMovie';
 
-class MovieLibrary extends Component {
+import PropTypes from 'prop-types';
 
+class MovieLibrary extends Component {
   constructor(props) {
     super(props);
 
@@ -34,12 +35,12 @@ class MovieLibrary extends Component {
     this.setState({
       selectedGenre: event.target.value,
     });
-
   }
 
   render() {
     // const { subtitle, title, imagePath, storyline, rating, genre, bookmarked } = this.props;
     const { searchText, bookmarkedOnly, selectedGenre } = this.state;
+    const { movies } = this.props;
 
     return (
       <div>
@@ -52,11 +53,27 @@ class MovieLibrary extends Component {
           selectedGenre={ selectedGenre }
           onSelectedGenreChange={ this.onSelectedGenreChange }
         />
-        <MovieList movies={ this.props.movies } />
+        <MovieList movies={ movies } />
         <AddMovie onClick={ () => {} } />
       </div>
     );
   }
 }
+
+MovieLibrary.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        title: PropTypes.string.isRequired,
+        subtitle:PropTypes.string.isRequired,
+        storyline: PropTypes.string.isRequired,
+        rating: PropTypes.number.isRequired,
+        imagePath: PropTypes.string.isRequired,
+        bookmarked: PropTypes.bool.isRequired,
+        genre: PropTypes.string.isRequired,
+      },
+    ),
+  ).isRequired,
+};
 
 export default MovieLibrary;
