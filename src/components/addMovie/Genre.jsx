@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 export default class Genre extends React.Component {
   render() {
     const { genre, onChange } = this.props;
@@ -21,3 +23,8 @@ export default class Genre extends React.Component {
     );
   }
 }
+
+Genre.propTypes = {
+  genre: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

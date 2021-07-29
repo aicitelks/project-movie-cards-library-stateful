@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Image extends React.Component {
   render() {
@@ -17,3 +18,8 @@ export default class Image extends React.Component {
     );
   }
 }
+
+Image.propTypes = {
+  imagePath: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
