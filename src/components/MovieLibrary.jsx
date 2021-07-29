@@ -13,6 +13,8 @@ class MovieLibrary extends Component {
  */
 
   render() {
+    // const { subtitle, title, imagePath, storyline, rating, genre, bookmarked } = this.props;
+
     return (
       <div>
         <h2> My awesome movie library </h2>
