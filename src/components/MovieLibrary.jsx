@@ -1,11 +1,11 @@
 // implement MovieLibrary component here
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 import AddMovie from './AddMovie';
 
-import PropTypes from 'prop-types';
 
 class MovieLibrary extends Component {
   constructor(props) {
@@ -15,8 +15,7 @@ class MovieLibrary extends Component {
       searchText: '',
       bookmarkedOnly: false,
       selectedGenre: '',
-      movies: this.props,
-    }
+    };
   }
 
   onSearchTextChange = (event) => {
@@ -65,7 +64,7 @@ MovieLibrary.propTypes = {
     PropTypes.shape(
       {
         title: PropTypes.string.isRequired,
-        subtitle:PropTypes.string.isRequired,
+        subtitle: PropTypes.string.isRequired,
         storyline: PropTypes.string.isRequired,
         rating: PropTypes.number.isRequired,
         imagePath: PropTypes.string.isRequired,
