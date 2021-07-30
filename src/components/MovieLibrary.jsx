@@ -10,28 +10,27 @@ class MovieLibrary extends Component {
   constructor(props) {
     super(props);
 
-    const { movies } = this.props;
-
     // o estado é assíncrono
     this.state = {
       searchText: '',
       bookmarkedOnly: false,
       selectedGenre: '',
-      movies: movies,
+      movies: props.movies,
     };
   }
 
   onSearchTextChange = (event) => {
     const { movies } = this.state;
-    const {movies: allMovies } = this.props;
+    const { movies: allMovies } = this.props;
     const searchFilterText = event.target.value;
-    let moviesFiltereds =[];
+    let moviesFiltereds = [];
 
-    if(searchFilterText !== '') {
+    if (searchFilterText !== '') {
       moviesFiltereds = movies.filter((movie) => (
-          movie.title.includes(searchFilterText) ||
-          movie.subtitle.includes(searchFilterText) ||
-          movie.storyline.includes(searchFilterText)
+        // trecho inspirado durante o code-review de @raugusto96
+        movie.title.includes(searchFilterText)
+        || movie.subtitle.includes(searchFilterText)
+        || movie.storyline.includes(searchFilterText)
       ));
     } else moviesFiltereds = allMovies;
 
@@ -48,7 +47,7 @@ class MovieLibrary extends Component {
     const { movies: allMovies } = this.props;
     let moviesFiltereds = [];
 
-    if(checkboxStatus === true) {
+    if (checkboxStatus === true) {
       moviesFiltereds = movies.filter((movie) => movie.bookmarked === true);
     } else {
       moviesFiltereds = allMovies;
@@ -66,7 +65,7 @@ class MovieLibrary extends Component {
     const { movies } = this.state;
     let moviesFiltereds = movies;
 
-    if(newGenre !== '') {
+    if (newGenre !== '') {
       moviesFiltereds = movies.filter((movie) => movie.genre === newGenre);
     }
 
