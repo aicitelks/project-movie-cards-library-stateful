@@ -20,6 +20,6 @@ export default class Image extends React.Component {
 }
 
 Image.propTypes = {
-  imagePath: PropTypes.number.isRequired,
+  imagePath: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
