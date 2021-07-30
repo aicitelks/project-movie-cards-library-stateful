@@ -75,6 +75,14 @@ class MovieLibrary extends Component {
     });
   }
 
+  addNewMovie = (stateAddMovie) => {
+    const { movies } = this.state;
+
+    this.setState({
+      movies: [...movies, stateAddMovie],
+    });
+  }
+
   render() {
     // const { subtitle, title, imagePath, storyline, rating, genre, bookmarked } = this.props;
     const { searchText, bookmarkedOnly, selectedGenre, movies } = this.state;
@@ -92,7 +100,7 @@ class MovieLibrary extends Component {
           onSelectedGenreChange={ this.onSelectedGenreChange }
         />
         <MovieList movies={ movies } />
-        <AddMovie onClick={ () => {} } />
+        <AddMovie onClick={ this.addNewMovie } />
       </div>
     );
   }
