@@ -28,16 +28,12 @@ class MovieLibrary extends Component {
     let moviesFiltereds =[];
 
     if(searchFilterText !== '') {
-      moviesFiltereds = movies.filter((movie) => {
-        return (
+      moviesFiltereds = movies.filter((movie) => (
           movie.title.includes(searchFilterText) ||
           movie.subtitle.includes(searchFilterText) ||
           movie.storyline.includes(searchFilterText)
-        );
-      });
-    } else {
-      moviesFiltereds = allMovies;
-    }
+      ));
+    } else moviesFiltereds = allMovies;
 
     this.setState({
       searchText: searchFilterText,
@@ -50,7 +46,7 @@ class MovieLibrary extends Component {
     const { bookmarkedOnly, movies } = this.state;
     // nomeando 'movies' de 'allMovies'
     const { movies: allMovies } = this.props;
-    let moviesFiltereds = [];  
+    let moviesFiltereds = [];
 
     if(checkboxStatus === true) {
       moviesFiltereds = movies.filter((movie) => movie.bookmarked === true);
