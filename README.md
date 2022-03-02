@@ -30,7 +30,7 @@ Uma possível implementação dessa biblioteca consta abaixo.
 ![image](preview.gif)
 ###### Foto: @Tryber
 
-Você precisará implementar componentes que em conjunto resultarão na biblioteca de cartões de filmes dinâmica.
+foi realizada a implementação dos componentes que em conjunto resultaram na biblioteca de cartões de filmes dinâmica.
 
 ## Desenvolvimento
 
@@ -88,4 +88,5 @@ Para visualizar o meu **Pull Request** aberto no repositório da Trybe e tomar n
 
 ![image](Nota-Final.png)
 
+### Contato:
 :large_blue_circle: [LinkedIn](https://www.linkedin.com/in/leticiacastro87/)
