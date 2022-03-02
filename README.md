@@ -81,12 +81,11 @@ npm run lint
 npm run lint:styles
 ```
 
+![image](Nota-Final.png)
+
 ---
 
 #### Por **Letícia Castro**
 Para visualizar o meu **Pull Request** aberto no repositório da Trybe e tomar nota da avaliação e dos testes, acesse: [pull/73](https://github.com/tryber/sd-013-b-project-movie-cards-library-stateful/pull/73) 😀
 
-![image](Nota-Final.png)
-
-### Contato:
 :large_blue_circle: [LinkedIn](https://www.linkedin.com/in/leticiacastro87/)
